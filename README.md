@@ -13,20 +13,20 @@
 
 <h1>Diagrama de Funcionamento</h1>
 
-![image](https://github.com/Ronynetwork/PAPEMLS/blob/main/Diagrama%20de%20Funcionamento.png?raw=true)
+![image](https://github.com/Ronynetwork/IA2C/blob/main/Diagrama%20de%20Funcionamento.png?raw=true)
 
 <h1>Introdução</h1>
-A utilização de ferramentas de autocorreção tem ganhado destaque no mundo tecnológico, visando a correção de erros críticos e prevenção de altos custos com a exploração de falhas de segurança. O uso de tecnologias como Machine Learning (ML) e ferramentas de análise estática, como o SonarQube, tem demonstrado grande potencial para aprimorar a qualidade do software, identificando erros e prevenindo futuros problemas. São muitas as pesquisas que afirmam que a utilização do ML juntamente com ferramentas de análise estática, não só corrigem erros como também tem a capacidade de prevenir futuros problemas no código. No entanto, os maiores gargalos apresentados no desenvolvimento de aplicações desse nicho é a dificuldade de compreender e atuar na correção de erros, tanto pela alta gama de possibilidades, como também pela ausência de uma explicação clara do problema. Além disso, no cenário tecnológico atual, onde estamos imersos em avanços que auxiliam externamente no desenvolvimento de aplicações, como Inteligência Artificial e Aprendizado de Máquina, são nítidas as oportunidades de explorar essas tecnologias para melhorar a produtividade. Dessa forma, o PAPEMLS procura integrar as inovações citadas ao processo de Pipeline, aumentando assim o alcance de análises e resoluções de erros. O objetivo é facilitar o entendimento do desenvolvedor, possibilitando avanços mais eficientes no código, mediante uso da inteligência artificial com segurança e confiabilidade. Isso oferece a possibilidade de entender e corrigir erros mais gerais e aprimorar o uso do seu tempo, permitindo direcionar o foco e energia nos pontos mais críticos do projeto, os quais também são identificados pelo PAPEMLS.
+A utilização de ferramentas de autocorreção tem ganhado destaque no mundo tecnológico, visando a correção de erros críticos e prevenção de altos custos com a exploração de falhas de segurança. O uso de tecnologias como Machine Learning (ML) e ferramentas de análise estática, como o SonarQube, tem demonstrado grande potencial para aprimorar a qualidade do software, identificando erros e prevenindo futuros problemas. São muitas as pesquisas que afirmam que a utilização do ML juntamente com ferramentas de análise estática, não só corrigem erros como também tem a capacidade de prevenir futuros problemas no código. No entanto, os maiores gargalos apresentados no desenvolvimento de aplicações desse nicho é a dificuldade de compreender e atuar na correção de erros, tanto pela alta gama de possibilidades, como também pela ausência de uma explicação clara do problema. Além disso, no cenário tecnológico atual, onde estamos imersos em avanços que auxiliam externamente no desenvolvimento de aplicações, como Inteligência Artificial e Aprendizado de Máquina, são nítidas as oportunidades de explorar essas tecnologias para melhorar a produtividade. Dessa forma, o IA2C procura integrar as inovações citadas ao processo de Pipeline, aumentando assim o alcance de análises e resoluções de erros. O objetivo é facilitar o entendimento do desenvolvedor, possibilitando avanços mais eficientes no código, mediante uso da inteligência artificial com segurança e confiabilidade. Isso oferece a possibilidade de entender e corrigir erros mais gerais e aprimorar o uso do seu tempo, permitindo direcionar o foco e energia nos pontos mais críticos do projeto, os quais também são identificados pelo IA2C.
 
 
 # Segurança e Avisos
 
-A utilização do PAPEMLS requer privilégios de administrador do sistema e também alterações em arquivos sensíveis dentro do sistema operacional, é importante frisar que o cuidado e responsabilidade com os dados presentes no repositório analizado é de extrema importância.
+A utilização do IA2C requer privilégios de administrador do sistema e também alterações em arquivos sensíveis dentro do sistema operacional, é importante frisar que o cuidado e responsabilidade com os dados presentes no repositório analizado é de extrema importância.
 
 # Instalação
 ## Pré-requisitos
 
-O Plugin visa a implementação de uma ferramenta que identifique, analise, atue e corrija o código fonte com problema de segurança e/ou desempenho. Para isso, será utilizada a instalação padrão do Docker 2.479.3 hospedada em uma máquina WSL2 com a distro do Ubuntu 24.04.1 LTS, CPU Intel Xeon E5-2630 v3 e 16GB RAM em conjunto com 80GB de espaço em disco. Nesse ambiente também estará presente o Jenkins 2.479.3 utilizando o Java 17.0, além disso, a imagem do SonarQube (9.9.8-community) e do Ollama (ollama/ollama).
+O Plugin visa a implementação de uma ferramenta que identifique, analise, atue e corrija o código fonte com problema de segurança e/ou desempenho. Para isso, será utilizada a instalação padrão do Docker 27.4.0 hospedada em uma máquina WSL2 com a distro do Ubuntu 24.04.1 LTS, CPU Intel Xeon E5-2630 v3 e 16GB RAM em conjunto com 80GB de espaço em disco. Nesse ambiente também estará presente o Jenkins 2.479.3 utilizando o Java 17.0, além disso, a imagem do SonarQube (9.9.8-community) e do Ollama (ollama/ollama).
 
 
 <h3>Ubuntu (24.04.1 LTS)</h3>
@@ -38,7 +38,7 @@ O Plugin visa a implementação de uma ferramenta que identifique, analise, atue
 
 <p><b>ISO:</b> <a href="https://ubuntu.com/download/desktop">Baixar ISO do Ubuntu</a></p>
 
-<h3>Docker (2.479.3)</h3>
+<h3>Docker (27.4.0)</h3>
 <p><a href="https://docs.docker.com/engine/install/ubuntu/">Instalação do Docker</a></p>
 
 <h3>Jenkins (2.479.3)</h3>
@@ -70,4 +70,4 @@ as tecnologias citadas acima necessitam ser instaladas antes da execução da pi
 
 # Conclusão
 
-O PAPEMLS se destaca principalmente pela possibilidade de realizar a autocorreção de erros de códigos prejudiciais, prevenindo uma possível falha de segurança apontada pelo SonarQube, tudo de forma optativa e selecionável. Essa utilização transforma o cenário atual de prevenção de erros em aplicações, auxiliando o time de desenvolvimento e segurança a identificar os problemas atuais e como futuramente poderia ser explorado por indivíduos maliciosos, além de demonstrar uma nova utilização para as ferramentas SAST.
+O IA2C se destaca principalmente pela possibilidade de realizar a autocorreção de erros de códigos prejudiciais, prevenindo uma possível falha de segurança apontada pelo SonarQube, tudo de forma optativa e selecionável. Essa utilização transforma o cenário atual de prevenção de erros em aplicações, auxiliando o time de desenvolvimento e segurança a identificar os problemas atuais e como futuramente poderia ser explorado por indivíduos maliciosos, além de demonstrar uma nova utilização para as ferramentas SAST.
