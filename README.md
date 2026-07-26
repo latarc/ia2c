@@ -60,6 +60,7 @@ as tecnologias citadas acima necessitam ser instaladas antes da execução da pi
  - Passo 2: Crie um repositório executando o compose do SonarQube para gerar o token de projeto que servirá como credencial
  - Passo 3: Configure uma chave SSH para o usuário Jenkins em seu sistema para que o mesmo possa se comunicar com o GitHub
  - Passo 4: Na aba de Credenciais do Jenkins, crie as credenciais de acesso sonar-scanner e git-token para conseguir rodar a Pipeline sem erros
+ - Passo 5: Insira no diretório "Scripts" o código com erro, ou altere a pasta para apontar para outro diretório que possua os arquivos a serem analizados no arquivo (sonar-project.properties)
  - Passo 5: Execute a Pipeline e verifique os logs em caso de problemas
  - Passo 6: Verifique o localhost:5000 que será construído pelo Flask com os erros caso sejam detectados pelo SonarQube
 
