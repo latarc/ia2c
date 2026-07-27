@@ -13,7 +13,7 @@ pipeline {
                 script {
                     def destinationDir= 'IA2C'
                     git credentialsId: 'log-token-git',
-                        url: 'git@github.com:Ronynetwork/IA2C.git',
+                        url: '[GIT_URL]',
                         branch: 'main'
                         directory: destinationDir
                 }
