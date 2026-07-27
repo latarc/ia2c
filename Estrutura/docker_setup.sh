@@ -19,5 +19,11 @@ echo \
 
 # Atualiza a lista de pacotes e instala o Latest dos plugins docker
 VERSION_DOCKER=5:27.4.0-1~ubuntu.24.04~noble
+
 sudo apt-get update
 sudo apt-get install -y docker-ce=$VERSION_DOCKER docker-ce-cli=$VERSION_DOCKER containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo systemctl enable docker
+sudo systemctl start docker
+
+sudo usermod -a -G docker $USER

@@ -1,5 +1,5 @@
 # Configura o Git para usar SSH em vez de HTTPS 
-git remote set-url origin git@github.com:Ronynetwork/IA2C.git
+git remote set-url origin ["GIT_URL"]
 git config user.name "Jenkins"
 git config user.email "jenkins@correction"
 
