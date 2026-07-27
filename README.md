@@ -1,29 +1,22 @@
-<h1 align="center">🔍 IA2C: Ferramenta Inteligente para Detecção e Remediação Assistida de Violações de Código em Pipelines DevSecOps</h1>
+<p align="center">
+  <img src="https://github.com/latarc/ia2c/blob/main/assets/logo.svg" alt="Arquitetura PAPEMLS" width="300">
+</p><h2 align="center">
 
-<h2 align="center">
-
-<a href="https://hub.docker.com/" target="_blank"><img align="center" alt="Docker" src="https://img.shields.io/badge/Docker-Containerização-black?style=for-the-badge&logo=docker&logoColor=blue"/></a>
-<a href="https://www.jenkins.io/doc/" target="_blank"><img align="center" alt="Jenkins" src="https://img.shields.io/badge/Jenkins-CI/CD-black?style=for-the-badge&logo=jenkins&logoColor=orange"/></a>
-<a href="https://docs.sonarsource.com/sonarqube-server/" target="_blank"><img align="center" alt="SonarQube" src="https://img.shields.io/badge/SonarQube-SAST-black?style=for-the-badge&logo=sonarqube&logoColor=4E9BCD"/></a>
-<a href="#"><img align="center" alt="Python" src="https://img.shields.io/badge/Python-Automação-black?style=for-the-badge&logo=python&logoColor=yellow"/></a>
-<a href="https://github.com/Ronynetwork/PAPEMLS" target="_blank"><img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub-Repositório-black?style=for-the-badge&logo=github"/></a>
-
-<br><br>
-
-<a href="#"><img align="center" alt="Desenvolvedor" src="https://img.shields.io/badge/👨🏻‍💻_Desenvolvedor-Ronyldo_Oliveira-black?style=for-the-badge"/></a>
-<a href="#"><img align="center" alt="Orientador" src="https://img.shields.io/badge/💡_Orientador-Felipe_Dantas-black?style=for-the-badge"/></a>
+<a href="#"><img align="center" alt="desenvolvedor" src="https://img.shields.io/badge/🧑🏻‍💻_Desenvolvedor-Ronyldo_Oliveira-red"/></a>
+<a href="#"><img align="center" alt="orientador" src="https://img.shields.io/badge/💡_Orientador-Felipe_Dantas-black"/></a>
+<a href="#"><img align="center" alt="license" src="https://img.shields.io/badge/⚖️_LICENSE-MIT_License-black"/></a>
+<a href="#"><img align="center" alt="pl" src="https://img.shields.io/badge/python-3.12+-blue"/></a>
+<a href="#"><img align="center" alt="status" src="https://img.shields.io/badge/status-active-green"/></a>
+<a href="#"><img align="center" alt="open_source" src="https://img.shields.io/badge/open_source-yes-green"/></a>
 
 </h2>
 
+<h1 align="left">🔍 IA2C: Ferramenta Inteligente para Detecção e Remediação Assistida de Violações de Código em Pipelines DevSecOps</h1>
+
+
 # Introdução
+O **PAPEMLS** integra modelos de linguagem ao processo de análise estática (SAST), fornecendo explicações e sugestões de correção para violações identificadas pelo SonarQube durante a execução da pipeline. Além disso, automatiza a configuração do ambiente por meio de scripts que instalam e configuram todas as dependências necessárias para sua utilização, adicionalmente, fornece a interface interativa para correção assistida.
 
-O **PAPEMLS** é uma ferramenta voltada ao apoio do processo de análise estática de código em pipelines DevSecOps, integrando tecnologias de **Machine Learning**, **Inteligência Artificial**, **SonarQube** e **Jenkins** para auxiliar desenvolvedores na compreensão e remediação de violações identificadas durante a execução da pipeline.
-
-Ferramentas de análise estática (SAST) são amplamente utilizadas para identificar vulnerabilidades, problemas de qualidade e más práticas de desenvolvimento antes da disponibilização de uma aplicação. Entretanto, compreender a causa de cada violação e definir a melhor estratégia de correção ainda representa um desafio, principalmente em projetos de grande porte.
-
-O PAPEMLS propõe uma abordagem que integra modelos de linguagem ao processo de análise estática, fornecendo explicações contextualizadas e sugestões de correção para as violações detectadas pelo SonarQube durante a execução da pipeline.
-
-Além de automatizar o fluxo de análise, o projeto busca reduzir o esforço necessário para configurar o ambiente de execução, disponibilizando scripts capazes de instalar automaticamente todas as dependências necessárias para sua utilização.
 
 ---
 
@@ -178,6 +171,7 @@ Antes da primeira execução da Pipeline, atualize o arquivo `Jenkinsfile` com a
 
 - usuário ou organização do GitHub;
 - URL do repositório;
+- Local de análise (Atualmente diretório "scripts")
 - branch utilizada (quando diferente da padrão);
 - identificadores das credenciais cadastradas no Jenkins.
 
@@ -206,7 +200,9 @@ O fluxo de execução será:
 
 ![image](https://github.com/latarc/ia2c/blob/main/working-flow-500.png)
 
----
+<p>
+  Ao final do processo o pipeline deve analisar seus arquivos presentes no diretório indicado e apresentar problemas encontrados na interface web. Além disso, deve ser possível corrigir os mesmos com a seleção da opção "corrigir".
+</p>
 
 # License
 
