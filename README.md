@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/latarc/ia2c/blob/main/assets/logo.svg" alt="Arquitetura PAPEMLS" width="300">
+  <img src="https://github.com/latarc/ia2c/blob/main/assets/logo.svg" alt="Arquitetura IA2C" width="300">
 </p><h2 align="center">
 
 <a href="#"><img align="center" alt="desenvolvedor" src="https://img.shields.io/badge/🧑🏻‍💻_Desenvolvedor-Ronyldo_Oliveira-red"/></a>
@@ -15,14 +15,14 @@
 
 
 # Introdução
-O **PAPEMLS** integra modelos de linguagem ao processo de análise estática (SAST), fornecendo explicações e sugestões de correção para violações identificadas pelo SonarQube durante a execução da pipeline. Além disso, automatiza a configuração do ambiente por meio de scripts que instalam e configuram todas as dependências necessárias para sua utilização, adicionalmente, fornece a interface interativa para correção assistida.
+O **IA2C** integra modelos de linguagem ao processo de análise estática (SAST), fornecendo explicações e sugestões de correção para violações identificadas pelo SonarQube durante a execução da pipeline. Além disso, automatiza a configuração do ambiente por meio de scripts que instalam e configuram todas as dependências necessárias para sua utilização, adicionalmente, fornece a interface interativa para correção assistida.
 
 
 ---
 
 # Segurança e Avisos
 
-A execução do PAPEMLS requer privilégios administrativos durante o processo de instalação, uma vez que são realizadas alterações no ambiente operacional, incluindo a instalação de serviços do sistema, Docker Engine e Jenkins.
+A execução do IA2C requer privilégios administrativos durante o processo de instalação, uma vez que são realizadas alterações no ambiente operacional, incluindo a instalação de serviços do sistema, Docker Engine e Jenkins.
 
 Recomenda-se utilizar um ambiente de testes ou desenvolvimento antes da execução em ambientes de produção.
 
@@ -49,7 +49,7 @@ O ambiente utilizado para desenvolvimento e validação da ferramenta foi compos
 
 # Arquitetura
 
-O PAPEMLS utiliza a seguinte arquitetura durante sua execução:
+O IA2C utiliza a seguinte arquitetura durante sua execução:
 
 ```
 
@@ -88,7 +88,7 @@ Não é necessário instalar previamente:
 - Docker Compose;
 - Jenkins.
 
-Todos esses componentes são instalados automaticamente pelo instalador do PAPEMLS.
+Todos esses componentes são instalados automaticamente pelo instalador do IA2C.
 
 ---
 
