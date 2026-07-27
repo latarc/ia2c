@@ -198,7 +198,7 @@ No SonarQube defina o projeto como "IA2C - Main" e configure a instalação do p
 
 O fluxo de execução será:
 
-![image](https://github.com/latarc/ia2c/blob/main/working-flow-500.png)
+![image](https://github.com/latarc/ia2c/blob/main/assets/working-flow-500.png)
 
 <p>
   Ao final do processo o pipeline deve analisar seus arquivos presentes no diretório indicado e apresentar problemas encontrados na interface web. Além disso, deve ser possível corrigir os mesmos com a seleção da opção "corrigir".
