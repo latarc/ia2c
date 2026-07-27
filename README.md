@@ -1,74 +1,213 @@
-<h1></h1>
-<h1 align="center"> 🔍 IA2C: Ferramenta Inteligente para Detecção e Remediação Assistida de Violações de Código em Pipelines DevSecOps  <br>
-  <h2 align="center">
-    <a href="https://hub.docker.com/" target="_blank"><img align="center" alt="Docker" src="https://img.shields.io/badge/Docker-Imagens_Docker-black?style=for-the-badge&logo=docker&logoColor=blue"/></a>
-    <a href="https://www.jenkins.io/doc/" target="_blank"><img align="center" alt="Jenkins" src="https://img.shields.io/badge/Jenkins-Pipeline-black?style=for-the-badge&logo=jenkins&logoColor=orange"/></a>
-    <a href="https://docs.sonarqube.org/" target="_blank"><img align="center" alt="SonarQube" src="https://img.shields.io/badge/SonarQube-Análise-black?style=for-the-badge&logo=sonarqube&logoColor=blue"/></a>
-    <a href="https://github.com/Ronynetwork/AVSAC" target="_blank"><img align="center" alt="GitHub" src="https://img.shields.io/badge/Github-Repositório-black?style=for-the-badge&logo=github&logoColor=white"></a>
-    <br><br>
-    <a href="#"><img align="center" alt="Desenvolvedores" src="https://img.shields.io/badge/👨🏻‍💻_Desenvolvedor-Ronyldo_Oliveira-black?style=for-the-badge"/></a>
-    <a href="#"><img align="center" alt="Orientador" src="https://img.shields.io/badge/💡_Orientador-Felipe_Dantas-black?style=for-the-badge"/></a>
-  </h2>
-</h1>
+<h1 align="center">🔍 IA2C: Ferramenta Inteligente para Detecção e Remediação Assistida de Violações de Código em Pipelines DevSecOps</h1>
 
-<h1>Diagrama de Funcionamento</h1>
+<h2 align="center">
 
-![image](https://github.com/latarc/ia2c/blob/main/working-flow-500.png)
+<a href="https://hub.docker.com/" target="_blank"><img align="center" alt="Docker" src="https://img.shields.io/badge/Docker-Containerização-black?style=for-the-badge&logo=docker&logoColor=blue"/></a>
+<a href="https://www.jenkins.io/doc/" target="_blank"><img align="center" alt="Jenkins" src="https://img.shields.io/badge/Jenkins-CI/CD-black?style=for-the-badge&logo=jenkins&logoColor=orange"/></a>
+<a href="https://docs.sonarsource.com/sonarqube-server/" target="_blank"><img align="center" alt="SonarQube" src="https://img.shields.io/badge/SonarQube-SAST-black?style=for-the-badge&logo=sonarqube&logoColor=4E9BCD"/></a>
+<a href="#"><img align="center" alt="Python" src="https://img.shields.io/badge/Python-Automação-black?style=for-the-badge&logo=python&logoColor=yellow"/></a>
+<a href="https://github.com/Ronynetwork/PAPEMLS" target="_blank"><img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub-Repositório-black?style=for-the-badge&logo=github"/></a>
 
-<h1>Introdução</h1>
-A utilização de ferramentas de autocorreção tem ganhado destaque no mundo tecnológico, visando a correção de erros críticos e prevenção de altos custos com a exploração de falhas de segurança. O uso de tecnologias como Machine Learning (ML) e ferramentas de análise estática, como o SonarQube, tem demonstrado grande potencial para aprimorar a qualidade do software, identificando erros e prevenindo futuros problemas. São muitas as pesquisas que afirmam que a utilização do ML juntamente com ferramentas de análise estática, não só corrigem erros como também tem a capacidade de prevenir futuros problemas no código. No entanto, os maiores gargalos apresentados no desenvolvimento de aplicações desse nicho é a dificuldade de compreender e atuar na correção de erros, tanto pela alta gama de possibilidades, como também pela ausência de uma explicação clara do problema. Além disso, no cenário tecnológico atual, onde estamos imersos em avanços que auxiliam externamente no desenvolvimento de aplicações, como Inteligência Artificial e Aprendizado de Máquina, são nítidas as oportunidades de explorar essas tecnologias para melhorar a produtividade. Dessa forma, o IA2C procura integrar as inovações citadas ao processo de Pipeline, aumentando assim o alcance de análises e resoluções de erros. O objetivo é facilitar o entendimento do desenvolvedor, possibilitando avanços mais eficientes no código, mediante uso da inteligência artificial com segurança e confiabilidade. Isso oferece a possibilidade de entender e corrigir erros mais gerais e aprimorar o uso do seu tempo, permitindo direcionar o foco e energia nos pontos mais críticos do projeto, os quais também são identificados pelo IA2C.
+<br><br>
 
+<a href="#"><img align="center" alt="Desenvolvedor" src="https://img.shields.io/badge/👨🏻‍💻_Desenvolvedor-Ronyldo_Oliveira-black?style=for-the-badge"/></a>
+<a href="#"><img align="center" alt="Orientador" src="https://img.shields.io/badge/💡_Orientador-Felipe_Dantas-black?style=for-the-badge"/></a>
+
+</h2>
+
+# Introdução
+
+O **PAPEMLS** é uma ferramenta voltada ao apoio do processo de análise estática de código em pipelines DevSecOps, integrando tecnologias de **Machine Learning**, **Inteligência Artificial**, **SonarQube** e **Jenkins** para auxiliar desenvolvedores na compreensão e remediação de violações identificadas durante a execução da pipeline.
+
+Ferramentas de análise estática (SAST) são amplamente utilizadas para identificar vulnerabilidades, problemas de qualidade e más práticas de desenvolvimento antes da disponibilização de uma aplicação. Entretanto, compreender a causa de cada violação e definir a melhor estratégia de correção ainda representa um desafio, principalmente em projetos de grande porte.
+
+O PAPEMLS propõe uma abordagem que integra modelos de linguagem ao processo de análise estática, fornecendo explicações contextualizadas e sugestões de correção para as violações detectadas pelo SonarQube durante a execução da pipeline.
+
+Além de automatizar o fluxo de análise, o projeto busca reduzir o esforço necessário para configurar o ambiente de execução, disponibilizando scripts capazes de instalar automaticamente todas as dependências necessárias para sua utilização.
+
+---
 
 # Segurança e Avisos
 
-A utilização do IA2C requer privilégios de administrador do sistema e também alterações em arquivos sensíveis dentro do sistema operacional, é importante frisar que o cuidado e responsabilidade com os dados presentes no repositório analizado é de extrema importância.
+A execução do PAPEMLS requer privilégios administrativos durante o processo de instalação, uma vez que são realizadas alterações no ambiente operacional, incluindo a instalação de serviços do sistema, Docker Engine e Jenkins.
+
+Recomenda-se utilizar um ambiente de testes ou desenvolvimento antes da execução em ambientes de produção.
+
+Também é responsabilidade do usuário garantir a confidencialidade dos repositórios analisados e das credenciais configuradas durante a integração entre Jenkins, GitHub e SonarQube.
+
+---
+
+# Ambiente de Validação
+
+O ambiente utilizado para desenvolvimento e validação da ferramenta foi composto por:
+
+| Componente | Versão |
+|------------|---------|
+| Ubuntu | 20.04.1 LTS |
+| Docker Engine | 27.4.0 |
+| Jenkins | 2.479.3 |
+| Java | 21 |
+| SonarQube Community | 9.9.8 |
+| WSL | WSL2 |
+| Ngrok (localhost) | 3.4.0 |
+| Hardware utilizado | Intel Xeon E5-2630 v3 • 16 GB RAM • 80 GB SSD |
+
+---
+
+# Arquitetura
+
+O PAPEMLS utiliza a seguinte arquitetura durante sua execução:
+
+```
+
+Ubuntu / WSL
+│
+├── Python
+├── Jenkins
+├── Docker Engine
+│
+└── Docker Compose
+│
+└── SonarQube (Container)
+
+```
+
+O Jenkins é instalado diretamente no sistema operacional hospedeiro e é responsável pela execução da pipeline.
+
+O SonarQube é disponibilizado através de um container Docker criado automaticamente durante o processo de instalação.
+
+---
 
 # Instalação
+
 ## Pré-requisitos
 
-O Plugin visa a implementação de uma ferramenta que identifique, analise, atue e corrija o código fonte com problema de segurança e/ou desempenho. Para isso, será utilizada a instalação padrão do Docker 27.4.0 hospedada em uma máquina WSL2 com a distro do Ubuntu 24.04.1 LTS, CPU Intel Xeon E5-2630 v3 e 16GB RAM em conjunto com 80GB de espaço em disco. Nesse ambiente também estará presente o Jenkins 2.479.3 utilizando o Java 17.0, além disso, a imagem do SonarQube (9.9.8-community) e do Ollama (ollama/ollama).
+É necessário possuir apenas:
 
+- Ubuntu 20.04 LTS (nativo, WSL2 ou Máquina Virtual);
+- Git instalado;
+- conexão com a Internet.
 
-<h3>Ubuntu (24.04.1 LTS)</h3>
+Não é necessário instalar previamente:
 
-<p><b>Via WSL:</b></p>
-<pre>wsl --install -d Ubuntu-20.04</pre>
+- Python;
+- Docker;
+- Docker Compose;
+- Jenkins.
 
-<p><b>Via VirtualBox:</b> <a href="https://www.virtualbox.org/wiki/Downloads">Baixar VirtualBox</a></p>
+Todos esses componentes são instalados automaticamente pelo instalador do PAPEMLS.
 
-<p><b>ISO:</b> <a href="https://ubuntu.com/download/desktop">Baixar ISO do Ubuntu</a></p>
+---
 
-<h3>Docker (27.4.0)</h3>
-<p><a href="https://docs.docker.com/engine/install/ubuntu/">Instalação do Docker</a></p>
+## Clonando o projeto
 
-<h3>Jenkins (2.479.3)</h3>
-<p><a href="https://www.jenkins.io/doc/book/installing/linux/#debianubuntu">Instalação do Jenkins</a></p>
+```bash
+git clone https://github.com/latarc/ia2c.git
 
-<h3>Ngrok (para testes localhost)</h3>
-<p><a href="https://ngrok.com/downloads/linux">Baixar Ngrok</a></p>
+cd ia2c
+```
 
-<h3>Jenkins Plugins</h3>
-<p>Pipeline Utility Steps Plugin</p>
-<p>SonarQube Instalations</p>
-<p>Sonar Quality Gates</p>
+---
 
-as tecnologias citadas acima necessitam ser instaladas antes da execução da pipeline.
+## Executando o instalador
+
+Conceda permissão de execução ao script:
+
+```bash
+chmod +x install.sh
+```
+
+Execute o instalador:
+
+```bash
+./install.sh
+```
+
+Durante a instalação serão executadas automaticamente as seguintes etapas:
+
+- instalação do Python e suas dependências;
+- instalação do Docker Engine;
+- instalação do Docker Compose;
+- instalação do Jenkins;
+- inicialização do serviço Jenkins;
+- criação da instância do SonarQube utilizando Docker Compose;
+- preparação do ambiente para execução da pipeline.
+
+Ao término da instalação estarão disponíveis:
+
+- Jenkins
+
+```
+http://localhost:8080
+```
+
+- SonarQube
+
+```
+http://localhost:9000
+```
+
+Caso o instalador adicione o usuário atual ao grupo `docker`, poderá ser necessário realizar logout/login (ou reiniciar a sessão) para utilizar o Docker sem privilégios administrativos.
+
+# Configuração Inicial do Jenkins
+
+Após a instalação, acesse:
+
+```
+http://localhost:8080
+```
+
+Realize a configuração inicial do Jenkins seguindo a documentação oficial:
+
+- [Configuração inicial do Jenkins](https://www.jenkins.io/doc/book/using/)
+- [Configuração de pipelines](https://www.jenkins.io/doc/book/pipeline/)
+
+Ao final da configuração, certifique-se de que:
+
+- o plugin **Pipeline** está instalado (incluído nos plugins sugeridos);
+- o plugin **SonarQube Scanner** está instalado;
+- as credenciais de acesso ao Git e ao SonarQube foram cadastradas.
+
+---
+
+# Configuração do Jenkinsfile
+
+Antes da primeira execução da Pipeline, atualize o arquivo `Jenkinsfile` com as informações do seu ambiente.
+
+É necessário alterar:
+
+- usuário ou organização do GitHub;
+- URL do repositório;
+- branch utilizada (quando diferente da padrão);
+- identificadores das credenciais cadastradas no Jenkins.
+
+> **Importante:** As variáveis referentes ao repositório Git devem ser atualizadas para o usuário responsável pelo repositório. Caso contrário, o Jenkins não conseguirá autenticar e realizar o checkout do código.
+
+---
 
 # Teste Mínimo
 
- - Passo 1: Crie um Job em formato de Pipeline dentro da interface do Jenkins e aponte para o repositório que apresenta o Jenkinsfile
- - Passo 2: Crie um repositório executando o compose do SonarQube para gerar o token de projeto que servirá como credencial
- - Passo 3: Configure uma chave SSH para o usuário Jenkins em seu sistema para que o mesmo possa se comunicar com o GitHub
- - Passo 4: Na aba de Credenciais do Jenkins, crie as credenciais de acesso sonar-scanner e git-token para conseguir rodar a Pipeline sem erros
- - Passo 5: Insira no diretório "Scripts" o código com erro, ou altere a pasta para apontar para outro diretório que possua os arquivos a serem analizados no arquivo (sonar-project.properties)
- - Passo 6: Execute a Pipeline e verifique os logs em caso de problemas
- - Passo 7: Verifique o localhost:5000 que será construído pelo Flask com os erros caso sejam detectados pelo SonarQube
+Após concluir a instalação e a configuração inicial do Jenkins:
 
-# Exemplo Funcional
+1. Crie um novo projeto do tipo **Pipeline**;
+2. Configure o Pipeline para utilizar o `Jenkinsfile` presente no repositório Git;
+3. Execute **Build Now**;
+4. Acesse o SonarQube em:
 
-## YouTube: 
- - Link: [IA2C - Demo](https://youtu.be/y79r4gc8u58)
+```
+http://localhost:9000
+```
 
-# Conclusão
+No SonarQube defina o projeto como "IA2C - Main" e configure a instalação do plugin no Jenkins apontando para o mesmo local de instalação do SonarQube.
 
-O IA2C se destaca principalmente pela possibilidade de realizar a autocorreção de erros de códigos prejudiciais, prevenindo uma possível falha de segurança apontada pelo SonarQube, tudo de forma optativa e selecionável. Essa utilização transforma o cenário atual de prevenção de erros em aplicações, auxiliando o time de desenvolvimento e segurança a identificar os problemas atuais e como futuramente poderia ser explorado por indivíduos maliciosos, além de demonstrar uma nova utilização para as ferramentas SAST.
+# Resultado
+
+O fluxo de execução será:
+
+![image](https://github.com/latarc/ia2c/blob/main/working-flow-500.png)
+
+---
+
+# License
+
+[MIT License](LICENSE)
