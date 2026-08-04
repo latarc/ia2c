@@ -22,8 +22,8 @@ pipeline {
         stage('Instalação do Docker') {
             steps {
                 script {
-                    sh 'chmod +x Estrutura/docker_setup.sh'
-                    sh './Estrutura/docker_setup.sh'
+                    sh 'chmod +x estrutura/docker_setup.sh'
+                    sh './estrutura/docker_setup.sh'
                 }
             }
         }
@@ -43,7 +43,7 @@ pipeline {
                         }
                         else{
                             echo "Realizando build do SonarQube"
-                            sh 'docker compose -f Estrutura/docker-compose-sonar.yml up -d --remove-orphans'
+                            sh 'docker compose -f estrutura/docker-compose-sonar.yml up -d --remove-orphans'
 
                         }
                     }
@@ -101,11 +101,11 @@ pipeline {
         failure {
             script{
                 echo 'instalando pacotes necessários'
-                sh 'chmod +x ./Estrutura/setup.sh ; ./Estrutura/setup.sh'
+                sh 'chmod +x ./estrutura/setup.sh ; ./estrutura/setup.sh'
 
                 withSonarQubeEnv('IA2C--Main') {
                     env.SONAR_AUTH_TOKEN = "${SONAR_AUTH_TOKEN}"
-                    def output = sh(script: 'python3 Estrutura/source.py', returnStdout: true).trim()
+                    def output = sh(script: 'python3 estrutura/source.py', returnStdout: true).trim()
                     env.ERROR_POINT=output
                     echo "${ERROR_POINT}"
                 }
@@ -115,8 +115,8 @@ pipeline {
                     echo 'Executando arquivo de ML'
                     sh """
                         . papemls/bin/activate
-                        chmod +x Estrutura/ML.py
-                        API_KEY=${API_KEY} python3 Estrutura/ML.py
+                        chmod +x estrutura/ML.py
+                        API_KEY=${API_KEY} python3 estrutura/ML.py
                     """
                 }
 
@@ -126,9 +126,9 @@ pipeline {
                 sh '''
                     . papemls/bin/activate
                     pwd
-                    ls Estrutura/notification
-                    chmod +x Estrutura/notification/main.py
-                    python3 Estrutura/notification/main.py &
+                    ls estrutura/notification
+                    chmod +x estrutura/notification/main.py
+                    python3 estrutura/notification/main.py &
                     sleep 5
                 '''
             }
@@ -150,9 +150,9 @@ pipeline {
                             if (resjson.resposta == "corrigir") {
                                 env.ERROS = resjson.erros  
                                 sh '''
-                                    chmod +x Estrutura/autocorrect.py Estrutura/git_branch.sh
-                                    python3 Estrutura/autocorrect.py || echo "Erro no autocorrect"
-                                    ./Estrutura/git_branch.sh || echo "Erro no git_branch"
+                                    chmod +x estrutura/autocorrect.py estrutura/git_branch.sh
+                                    python3 estrutura/autocorrect.py || echo "Erro no autocorrect"
+                                    ./estrutura/git_branch.sh || echo "Erro no git_branch"
                                 '''
                                 break
                             } else if (resjson.resposta == 'ignorar') {

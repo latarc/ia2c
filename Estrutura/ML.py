@@ -320,8 +320,8 @@ try:
     try:
         html_complete = head + buttons + div_erros + body #Formatando o html completo
         script = script + types + end_script # Formatando o JS completo
-        os.makedirs('./Estrutura/notification/templates', exist_ok=True)
-        os.makedirs('./Estrutura/notification/static', exist_ok=True)
+        os.makedirs('./estrutura/notification/templates', exist_ok=True)
+        os.makedirs('./estrutura/notification/static', exist_ok=True)
         # print('Types:', types)
         # print('Div erros:', div_erros)
 
@@ -329,10 +329,10 @@ try:
         # print("Arquivo JS: ", script)
         # Cria o diretório se ele não existir
         logger.info("Criando diretórios e arquivos Web...")
-        with open(os.path.join('./Estrutura/notification/static', "script.js"), 'w') as static:
+        with open(os.path.join('./estrutura/notification/static', "script.js"), 'w') as static:
             static.write(script)
 
-        with open(os.path.join('./Estrutura/notification/templates', "index.html"), 'w') as arquivo:
+        with open(os.path.join('./estrutura/notification/templates', "index.html"), 'w') as arquivo:
             arquivo.write(html_complete)
         logger.info("Diretórios e arquivos criados!")
     except Exception as e:
