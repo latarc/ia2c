@@ -6,6 +6,9 @@
 </p>
 O IA2C integra modelos de linguagem ao processo de análise estática (SAST), fornecendo explicações e sugestões de correção para violações identificadas pelo SonarQube durante a execução da pipeline. Além disso, automatiza a configuração do ambiente por meio de scripts que instalam e configuram todas as dependências necessárias para sua utilização, adicionalmente, fornece a interface interativa para correção assistida.
 
+# Fluxo de execução
+![image](https://github.com/latarc/ia2c/blob/main/assets/working-flow-500.png)
+
 # Nota de segurança
 
 A execução do IA2C requer privilégios administrativos durante o processo de instalação, uma vez que são realizadas alterações no ambiente operacional, incluindo a instalação de serviços do sistema, Docker Engine e Jenkins.
@@ -14,44 +17,10 @@ Recomenda-se utilizar um ambiente de testes ou desenvolvimento antes da execuç�
 
 Também é responsabilidade do usuário garantir a confidencialidade dos repositórios analisados e das credenciais configuradas durante a integração entre Jenkins, GitHub e SonarQube.
 
-
 ## Pré-requisitos
 - Ubuntu 20.04 LTS (nativo, WSL2 ou Máquina Virtual);
 - Git instalado;
 - conexão com a Internet.
-
-<!-- # Ambiente de Validação
-
-O ambiente utilizado para desenvolvimento e validação da ferramenta foi composto por:
-
-| Componente | Versão |
-|------------|---------|
-| Ubuntu | 20.04.1 LTS |
-| Docker Engine | 27.4.0 |
-| Jenkins | 2.479.3 |
-| Java | 21 |
-| SonarQube Community | 9.9.8 |
-| WSL | WSL2 |
-| Ngrok (localhost) | 3.4.0 |
-| Hardware utilizado | Intel Xeon E5-2630 v3 • 16 GB RAM • 80 GB SSD | -->
-
-<!-- # Arquitetura
-
-O IA2C utiliza a seguinte arquitetura durante sua execução:
-
-```
-
-Ubuntu / WSL
-│
-├── Python
-├── Jenkins
-├── Docker Engine
-│
-└── Docker Compose
-│
-└── SonarQube (Container)
-
-``` -->
 
 O Jenkins é instalado diretamente no sistema operacional hospedeiro e é responsável pela execução da pipeline.
 
@@ -139,15 +108,7 @@ http://localhost:9000
 
 No SonarQube defina o projeto como "IA2C - Main" e configure a instalação do plugin no Jenkins apontando para o mesmo local de instalação do SonarQube.
 
-# Resultado
-
-O fluxo de execução será:
-
-![image](https://github.com/latarc/ia2c/blob/main/assets/working-flow-500.png)
-
-<p>
-  Ao final do processo o pipeline deve analisar seus arquivos presentes no diretório indicado e apresentar problemas encontrados na interface web. Além disso, deve ser possível corrigir os mesmos com a seleção da opção "corrigir".
-</p>
+Ao final do processo o pipeline deve analisar seus arquivos presentes no diretório indicado e apresentar problemas encontrados na interface web. Além disso, deve ser possível corrigir os mesmos com a seleção da opção "corrigir".
 
 # Licença
 
