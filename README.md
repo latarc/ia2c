@@ -6,6 +6,9 @@
 </p>
 O IA2C integra modelos de linguagem ao processo de análise estática (SAST), fornecendo explicações e sugestões de correção para violações identificadas pelo SonarQube durante a execução da pipeline. Além disso, automatiza a configuração do ambiente por meio de scripts que instalam e configuram todas as dependências necessárias para sua utilização, adicionalmente, fornece a interface interativa para correção assistida.
 
+**Vídeo demonstrativo:** [YouTube](https://youtu.be/y79r4gc8u58)
+
+
 # Fluxo de execução
 ![image](https://github.com/latarc/ia2c/blob/main/assets/working-flow-500.png)
 
