@@ -21,7 +21,7 @@ Recomenda-se utilizar um ambiente de testes ou desenvolvimento antes da execuç�
 
 Também é responsabilidade do usuário garantir a confidencialidade dos repositórios analisados e das credenciais configuradas durante a integração entre Jenkins, GitHub e SonarQube.
 
-## Pré-requisitos
+## Requisitos
 Ubuntu 24.04 LTS (nativo, WSL2 ou Máquina Virtual). 6GiB RAM e 50GiB de armazenamento são os requisitos mínimos para execução.
 
 ## Instalação
