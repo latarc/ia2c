@@ -6,7 +6,7 @@
 </p>
 O IA2C integra modelos de linguagem ao processo de análise estática (SAST), fornecendo explicações e sugestões de correção para violações identificadas pelo SonarQube durante a execução da pipeline. Além disso, automatiza a configuração do ambiente por meio de scripts que instalam e configuram todas as dependências necessárias para sua utilização, adicionalmente, fornece a interface interativa para correção assistida.
 
-# Informações do projeto
+## Informações do projeto
 Vídeo demonstrativo: https://youtu.be/y79r4gc8u58 <br>
 Repositório oficial: https://github.com/latarc/ia2c
 
@@ -22,13 +22,7 @@ Recomenda-se utilizar um ambiente de testes ou desenvolvimento antes da execuç�
 Também é responsabilidade do usuário garantir a confidencialidade dos repositórios analisados e das credenciais configuradas durante a integração entre Jenkins, GitHub e SonarQube.
 
 ### Pré-requisitos
-- Ubuntu 20.04 LTS (nativo, WSL2 ou Máquina Virtual);
-- Git instalado;
-- conexão com a Internet.
-
-O Jenkins é instalado diretamente no sistema operacional hospedeiro e é responsável pela execução da pipeline.
-
-O SonarQube é disponibilizado através de um container Docker criado automaticamente durante o processo de instalação.
+Ubuntu 24.04 LTS (nativo, WSL2 ou Máquina Virtual). 6GiB RAM e 50GiB de armazenamento são os requisitos mínimos para execução.
 
 ### Instalação
 
@@ -65,6 +59,7 @@ Durante a instalação serão executadas automaticamente as seguintes etapas:
 O instalador adiciona o usuário atual ao grupo `docker`, podendo ser necessário realizar logout/login (ou reiniciar a sessão) para utilizar o Docker sem privilégios administrativos.
 
 ## Configuração Inicial do Jenkins
+O Jenkins é instalado diretamente no sistema operacional hospedeiro e é responsável pela execução da pipeline.
 
 Após a instalação, acesse:
 
@@ -83,7 +78,7 @@ Ao final da configuração, certifique-se de que:
 - o plugin **SonarQube Scanner** está instalado;
 - as credenciais de acesso ao Git e ao SonarQube foram cadastradas.
 
-# Configuração do Jenkinsfile
+## Configuração do Jenkinsfile
 
 Antes da primeira execução da Pipeline, atualize o arquivo `Jenkinsfile` com as informações do seu ambiente.
 
