@@ -6,13 +6,14 @@
 </p>
 O IA2C integra modelos de linguagem ao processo de análise estática (SAST), fornecendo explicações e sugestões de correção para violações identificadas pelo SonarQube durante a execução da pipeline. Além disso, automatiza a configuração do ambiente por meio de scripts que instalam e configuram todas as dependências necessárias para sua utilização, adicionalmente, fornece a interface interativa para correção assistida.
 
-**Vídeo demonstrativo:** [YouTube](https://youtu.be/y79r4gc8u58)
+# Informações do projeto
+Vídeo demonstrativo: https://youtu.be/y79r4gc8u58 <br>
+Repositório oficial: https://github.com/latarc/ia2c
 
-
-# Fluxo de execução
+## Fluxo de execução
 ![image](https://github.com/latarc/ia2c/blob/main/assets/working-flow-500.png)
 
-# Nota de segurança
+## Nota de segurança
 
 A execução do IA2C requer privilégios administrativos durante o processo de instalação, uma vez que são realizadas alterações no ambiente operacional, incluindo a instalação de serviços do sistema, Docker Engine e Jenkins.
 
@@ -20,7 +21,7 @@ Recomenda-se utilizar um ambiente de testes ou desenvolvimento antes da execuç�
 
 Também é responsabilidade do usuário garantir a confidencialidade dos repositórios analisados e das credenciais configuradas durante a integração entre Jenkins, GitHub e SonarQube.
 
-## Pré-requisitos
+### Pré-requisitos
 - Ubuntu 20.04 LTS (nativo, WSL2 ou Máquina Virtual);
 - Git instalado;
 - conexão com a Internet.
@@ -29,7 +30,7 @@ O Jenkins é instalado diretamente no sistema operacional hospedeiro e é respon
 
 O SonarQube é disponibilizado através de um container Docker criado automaticamente durante o processo de instalação.
 
-## Instalação
+### Instalação
 
 ```bash
 git clone https://github.com/latarc/ia2c.git
@@ -37,7 +38,7 @@ git clone https://github.com/latarc/ia2c.git
 cd ia2c
 ```
 
-## Executando o instalador
+### Executando o instalador
 
 Conceda permissão de execução ao script:
 
@@ -63,7 +64,7 @@ Durante a instalação serão executadas automaticamente as seguintes etapas:
 
 O instalador adiciona o usuário atual ao grupo `docker`, podendo ser necessário realizar logout/login (ou reiniciar a sessão) para utilizar o Docker sem privilégios administrativos.
 
-# Configuração Inicial do Jenkins
+## Configuração Inicial do Jenkins
 
 Após a instalação, acesse:
 
@@ -96,7 +97,7 @@ Antes da primeira execução da Pipeline, atualize o arquivo `Jenkinsfile` com a
 
 > **Importante:** As variáveis referentes ao repositório Git devem ser atualizadas para o usuário responsável pelo repositório. Caso contrário, o Jenkins não conseguirá autenticar e realizar o checkout do código.
 
-# Teste Mínimo
+## Teste Mínimo
 
 Após concluir a instalação e a configuração inicial do Jenkins:
 
@@ -113,7 +114,7 @@ No SonarQube defina o projeto como "IA2C - Main" e configure a instalação do p
 
 Ao final do processo o pipeline deve analisar seus arquivos presentes no diretório indicado e apresentar problemas encontrados na interface web. Além disso, deve ser possível corrigir os mesmos com a seleção da opção "corrigir".
 
-# Licença
+## Licença
 
 Licença MIT
 
