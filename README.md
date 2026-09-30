@@ -39,13 +39,13 @@ cd ia2c
 Conceda permissão de execução ao script:
 
 ```bash
-chmod +x install.sh
+chmod +x ./install/linux/install.sh
 ```
 
 Execute o instalador:
 
 ```bash
-./install.sh
+source ./install/linux/install.sh
 ```
 
 Durante a instalação serão executadas automaticamente as seguintes etapas:
@@ -59,6 +59,7 @@ Durante a instalação serão executadas automaticamente as seguintes etapas:
 - preparação do ambiente para execução da pipeline.
 
 O instalador adiciona o usuário atual ao grupo `docker`, podendo ser necessário realizar logout/login (ou reiniciar a sessão) para utilizar o Docker sem privilégios administrativos.
+> **Importante:** É extremamente recomendado a execução da instalação por meio de um usuário com permissões de root.
 
 ## Configuração Inicial do Jenkins
 O Jenkins é instalado diretamente no sistema operacional hospedeiro e é responsável pela execução da pipeline.
