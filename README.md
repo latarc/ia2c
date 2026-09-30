@@ -26,6 +26,8 @@ Ubuntu 24.04 LTS (nativo, WSL2 ou Máquina Virtual). 6GiB RAM e 50GiB de armazen
 
 ## Instalação
 
+**OBS:** Utilize um usuário com permissões root para executar a instalação completa do sistema.
+
 ```bash
 git clone https://github.com/latarc/ia2c.git
 
@@ -90,7 +92,7 @@ Antes da primeira execução da Pipeline, atualize o arquivo `Jenkinsfile` com a
 - branch utilizada (quando diferente da padrão);
 - identificadores das credenciais cadastradas no Jenkins.
 
-> **Importante:** As variáveis referentes ao repositório Git devem ser atualizadas para o usuário responsável pelo repositório. Caso contrário, o Jenkins não conseguirá autenticar e realizar o checkout do código.
+> **Importante:** Deve ser criada uma credencial responsável pelo Pull no GitHub e outra variável no usuário Jenkins (SSH) responsável pelo commit ao fim da pipeline. Além disso, é necessário adicionar o endereço do GitHub ao arquivo known_hosts do usuário Jenkins.
 
 ## Teste Mínimo
 
