@@ -2,7 +2,7 @@
 sudo apt update
 
 # Install Java 21
-sudo apt install fontconfig openjdk-21-jre
+sudo apt install fontconfig openjdk-21-jre -y
 java -version
 
 # Download the Jenkins GPG key
@@ -16,4 +16,4 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
 sudo apt update
 
 # Install Jenkins
-sudo apt install jenkins
+sudo apt install jenkins=2.528.3 -y
