@@ -17,3 +17,6 @@ sudo apt update
 
 # Install Jenkins
 sudo apt install jenkins=2.528.3 -y
+
+# Add jenkins to docker group
+sudo usermod -aG docker jenkins
